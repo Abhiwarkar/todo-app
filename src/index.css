@@ -1,0 +1,139 @@
+:root {
+  /* Vibrant primary palette */
+  --primary-color: #4361ee;
+  --primary-light: #4895ef;
+  --primary-dark: #3f37c9;
+  
+  /* Accent colors */
+  --accent-color: #f72585;
+  --accent-light: #ff4d6d;
+  --accent-dark: #b5179e;
+  
+  /* Status colors */
+  --success-color: #4cc9f0;
+  --success-light: #72efdd;
+  --danger-color: #f94144;
+  --danger-light: #ff758f;
+  --warning-color: #f8961e;
+  --warning-light: #f9c74f;
+  
+  /* Neutral colors */
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #adb5bd;
+  --gray-800: #343a40;
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  --gradient-accent: linear-gradient(135deg, var(--accent-color), var(--accent-light));
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f5f9ff;
+  background-image: linear-gradient(135deg, #f5f7fb 0%, #e4ebf5 100%);
+  color: var(--dark-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+input, textarea {
+  font-family: 'Poppins', sans-serif;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.15);
+}
+
+#root {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  box-shadow: var(--shadow-sm);
+  letter-spacing: 0.5px;
+}
+
+.btn:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary {
+  background: var(--gradient-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #3a56dd, #4895ef);
+}
+
+.btn-success {
+  background: linear-gradient(135deg, var(--success-color), var(--success-light));
+  color: white;
+}
+
+.btn-success:hover {
+  opacity: 0.9;
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, var(--danger-color), var(--danger-light));
+  color: white;
+}
+
+.btn-danger:hover {
+  opacity: 0.9;
+}
+
+.btn-warning {
+  background: linear-gradient(135deg, var(--warning-color), var(--warning-light));
+  color: white;
+}
+
+.btn-warning:hover {
+  opacity: 0.9;
+}

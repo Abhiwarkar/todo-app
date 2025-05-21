@@ -1,0 +1,160 @@
+.todo-item {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+  position: relative;
+  overflow: hidden;
+}
+
+.todo-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: var(--gradient-primary);
+  border-radius: 4px 0 0 4px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.todo-item:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+  border-color: var(--gray-300);
+}
+
+.todo-item:hover::before {
+  opacity: 1;
+}
+
+.todo-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.todo-checkbox {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  accent-color: var(--primary-color);
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.todo-checkbox:checked {
+  transform: scale(1.1);
+}
+
+.todo-text {
+  font-size: 1.05rem;
+  word-break: break-word;
+  transition: all 0.3s ease;
+  padding: 0.25rem 0;
+  position: relative;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.todo-actions button {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.todo-actions button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Completed todo styling */
+.todo-item.completed {
+  background-color: var(--gray-100);
+  border-color: var(--gray-200);
+}
+
+.todo-item.completed::before {
+  background: var(--gradient-accent);
+  opacity: 0.5;
+}
+
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  color: var(--gray-500);
+}
+
+/* Edit form styling */
+.edit-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.edit-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--gray-200);
+  border-radius: 8px;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+}
+
+.edit-input:focus {
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.15);
+}
+
+.edit-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.edit-buttons button {
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  border-radius: 8px;
+}
+
+/* Animation for new todos */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.todo-item {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+@media (max-width: 480px) {
+  .todo-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .todo-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
