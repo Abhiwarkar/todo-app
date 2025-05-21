@@ -147,25 +147,5 @@ The application is fully responsive:
 - Tablet: Adjusted spacing and element sizes
 - Mobile: Stacked layout with optimized touch targets
 
-## 🚧 Future Enhancements
-
-Planned features for future versions:
-- Task categories/tags
-- Due dates and reminders
-- Search and filter capabilities
-- Dark/light theme toggle
-- Drag and drop reordering
-- Cloud synchronization
-
-
-
-## 🙏 Acknowledgements
-
-- React team for the amazing library
-- Vite team for the lightning-fast build tool
-- Font providers for the beautiful typography
-- The open-source community for inspiration
-
----
 
 Made with ❤️ by Abhishek Hiwarkar
